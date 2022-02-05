@@ -1,0 +1,11 @@
+#!/data/data/io.neoterm/files/usr/bin/env python3
+
+MCHS_PKG_NAME=""
+MCHS_PKG_ARCH=""
+MCHS_PKG_MAINTAINER=""
+MCHS_PKG_VERSION=""
+MCHS_PKG_HOMEPAGE=""
+MCHS_PKG_DEPENDS=""
+MCHS_PKG_SIZE=""
+MCHS_PKG_DESCRIPTION=""
+
