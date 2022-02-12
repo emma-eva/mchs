@@ -40,7 +40,7 @@ then
 	find ~/mchs/mchspkg/DEBIAN/* -type f -exec sed -i -e 's/com.termux/io.neoterm/g' {} \;
 	find ~/mchs/mchspkg/DEBIAN/* -type f -exec sed -i -e 's/@termux/@MCHS/g' {} \;
 	find ~/mchs/mchspkg$PREFIX/./ -type f -exec sed -i -e 's/com.termux/io.neoterm/g' {} \;
-	find ~/mchs/mchspkg$PREFIX/./ -type f -exec sed -i -e 's/termux-build/mchs-build/g' {} \;
+	#find ~/mchs/mchspkg$PREFIX/./ -type f -exec sed -i -e 's/termux-build/mchs-build/g' {} \;
 	chmod 755 ~/mchs/mchspkg/DEBIAN/*
 	chmod 755 ~/mchs/mchspkg/DEBIAN
 	chmod +x ~/mchs/mchspkg$PREFIX/bin/*
