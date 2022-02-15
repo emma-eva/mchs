@@ -51,11 +51,18 @@ do
 	#find ~/build/mchspkg$MCHS_PREFIX/./ -type f -exec sed -i -e 's/termux-build/mchs-build/g' {} \;
 	chmod 755 ~/build/mchspkg/DEBIAN/*
 	chmod 755 ~/build/mchspkg/DEBIAN
-	chmod +x ~/build/mchspkg$MCHS_PREFIX/bin/*
+	if [ -d ~/build/mchspkg$MCHS_PREFIX/bin ];
+	then
+		chmod +x ~/build/mchspkg$MCHS_PREFIX/bin/*
+	fi
+	if [ -d ~/build/mchspkg$MCHS_PREFIX/lib* ];
+	then
+		chmod +x ~/build/mchspkg$MCHS_PREFIX/lib*/*
+	fi
 	dpkg-deb --build ~/build/mchspkg ${DEB_URL##*/}
 	rm -rf ~/build/debs
 	rm -rf ~/build/mchspkg
-	echo '\n Build Finished Successfully'
+	echo '\n\n Build Finished Successfully'
 	mv ${DEB_PATH[6]} $DEB_FILE_PATH
 	printf ' Moved File: %s To: %s\n\n' "${DEB_PATH[6]}" "$DEB_FILE_PATH"
 done
